@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 
 function ToDoList() {
 	const [Todo, setTodo] = useState('');
@@ -15,7 +16,7 @@ function ToDoList() {
 
 	return (
 		<div>
-			<form>
+			<form onSubmit={onSubmit}>
 				<input onChange={onChange} value={Todo} placeholder='Write a to do' />
 				<button>Add</button>
 			</form>

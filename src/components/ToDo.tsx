@@ -1,6 +1,5 @@
 import { useSetRecoilState } from 'recoil';
 import { Categories, IToDo, toDoState } from '../atoms';
-import { useState } from 'react';
 
 function ToDo({ text, category, id }: IToDo) {
 	const setToDos = useSetRecoilState(toDoState);
@@ -50,7 +49,11 @@ function ToDo({ text, category, id }: IToDo) {
 				</button>
 			)}
 
-			<button onClick={deleteBtn}>Delete</button>
+			<button
+				style={{ backgroundColor: 'skyblue', borderRadius: '10px' }}
+				onClick={deleteBtn}>
+				Delete
+			</button>
 		</li>
 	);
 }
